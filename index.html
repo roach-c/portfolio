@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caleb Roach — Videography, Web Design, Founder</title>
+<meta name="description" content="Caleb Roach is a videographer, web designer and founder based in Oklahoma. Building brands, films and software at twenty.">
+<meta name="theme-color" content="#0B0B0C">
+
+<meta property="og:title" content="Caleb Roach — Videography, Web Design, Founder">
+<meta property="og:description" content="Videographer, web designer and founder based in Oklahoma.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ INTRO CURTAIN ============ -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__inner">
+    <span class="curtain__word">Videography</span>
+    <span class="curtain__word">Web Design</span>
+    <span class="curtain__word">Founder</span>
+  </div>
+  <div class="curtain__count"><span id="count">0</span></div>
+</div>
+
+<!-- ============ CURSOR ============ -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a class="nav__mark" href="#top">CR</a>
+  <nav class="nav__links">
+    <a href="#practice">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas class="hero__canvas" id="hero-canvas"></canvas>
+  <h1 class="hero__fallback" id="hero-fallback"><span>Caleb</span><span>Roach</span></h1>
+
+  <div class="hero__meta">
+    <div class="hero__meta-col">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hero__meta-col hero__meta-col--center">
+      <span>Open for work</span>
+      <span>Fall 2026</span>
+    </div>
+    <div class="hero__meta-col hero__meta-col--end">
+      <span>Videography · Web Design · Founder</span>
+      <span>Oklahoma, USA</span>
+    </div>
+  </div>
+
+  <div class="hero__scroll"><span>Scroll</span></div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker-track">
+    <span>Films that move</span><i>◆</i><span>Sites that convert</span><i>◆</i><span>A company at twenty</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" id="statement">
+  <p class="statement__eyebrow" data-reveal>01 — Premise</p>
+  <h2 class="statement__text" data-split>
+    Most people pick a lane. I shoot the film, build the site,
+    and <mark>run the company that ships both.</mark>
+  </h2>
+  <div class="statement__note" data-reveal>
+    <p>Twenty years old. Full time student. Co-founder of a software studio with real clients on real infrastructure. The work below is not coursework.</p>
+  </div>
+</section>
+
+<!-- ============ PRACTICE ============ -->
+<section class="practice" id="practice">
+  <div class="section-head">
+    <span class="section-head__num">02 — Practice</span>
+    <span class="section-head__label">Three disciplines, one standard</span>
+  </div>
+
+  <ul class="practice__list">
+    <li class="practice__row" data-img="assets/img/practice-film.svg">
+      <a href="#reel">
+        <span class="practice__idx">01</span>
+        <span class="practice__title">Videography</span>
+        <span class="practice__desc">Brand films, event coverage, aerial and colour. Shot, cut and graded in house.</span>
+        <span class="practice__arrow">↗</span>
+      </a>
+    </li>
+    <li class="practice__row" data-img="assets/img/practice-web.svg">
+      <a href="#work">
+        <span class="practice__idx">02</span>
+        <span class="practice__title">Web Design</span>
+        <span class="practice__desc">Marketing sites, custom CRMs and internal tools. Design through deployment.</span>
+        <span class="practice__arrow">↗</span>
+      </a>
+    </li>
+    <li class="practice__row" data-img="assets/img/practice-founder.svg">
+      <a href="#about">
+        <span class="practice__idx">03</span>
+        <span class="practice__title">Founder</span>
+        <span class="practice__desc">Co-founder of a studio selling websites and software to small operators.</span>
+        <span class="practice__arrow">↗</span>
+      </a>
+    </li>
+  </ul>
+
+  <figure class="practice__preview" id="practice-preview" aria-hidden="true">
+    <img alt="" id="practice-preview-img" src="assets/img/practice-film.svg">
+  </figure>
+</section>
+
+<!-- ============ REEL ============ -->
+<section class="reel" id="reel">
+  <div class="section-head">
+    <span class="section-head__num">03 — Reel</span>
+    <span class="section-head__label">2026 showreel</span>
+  </div>
+
+  <div class="reel__frame" id="reel-frame">
+    <video id="reel-video" playsinline muted loop preload="none" poster="assets/img/reel-poster.svg"></video>
+    <button class="reel__play" id="reel-play" type="button">
+      <span class="reel__play-dot"></span>
+      <span class="reel__play-text">Play reel</span>
+    </button>
+    <div class="reel__hint">Drop your file at <code>assets/video/reel.mp4</code></div>
+  </div>
+
+  <div class="reel__specs">
+    <div><span>Camera</span><b>Sony FX3</b></div>
+    <div><span>Grade</span><b>DaVinci Resolve</b></div>
+    <div><span>Runtime</span><b>01:42</b></div>
+    <div><span>Year</span><b>2026</b></div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="section-head__num">04 — Selected</span>
+    <span class="section-head__label">Six of the recent ones</span>
+  </div>
+
+  <div class="work__grid">
+    <article class="card" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-1.svg" alt="Tethered Crew"></a>
+      <div class="card__meta"><h3>Tethered Crew</h3><span>Brand · Site · Product</span><em>2026</em></div>
+    </article>
+    <article class="card card--tall" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-2.svg" alt="Roofing brand film"></a>
+      <div class="card__meta"><h3>Roofing Brand Film</h3><span>Direction · Colour</span><em>2026</em></div>
+    </article>
+    <article class="card" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-3.svg" alt="Field CRM"></a>
+      <div class="card__meta"><h3>Field CRM</h3><span>Product Design · Build</span><em>2026</em></div>
+    </article>
+    <article class="card" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-4.svg" alt="Lawn co. rebuild"></a>
+      <div class="card__meta"><h3>Lawn Co. Rebuild</h3><span>Web · 3D Map</span><em>2026</em></div>
+    </article>
+    <article class="card card--tall" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-5.svg" alt="Event coverage"></a>
+      <div class="card__meta"><h3>Event Coverage</h3><span>Multicam · Edit</span><em>2025</em></div>
+    </article>
+    <article class="card" data-reveal>
+      <a href="#" class="card__media"><img src="assets/img/work-6.svg" alt="Supplier portal"></a>
+      <div class="card__meta"><h3>Supplier Portal</h3><span>Web App</span><em>2025</em></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="section-head__num">05 — About</span>
+    <span class="section-head__label">The short version</span>
+  </div>
+
+  <div class="about__body">
+    <p class="about__lede" data-split>
+      I am <mark>twenty</mark>, I am a full time student, and I run a software studio
+      that ships to <mark>paying clients.</mark>
+    </p>
+    <div class="about__cols">
+      <p data-reveal>I started with a camera and a curiosity about why some brands feel expensive and others do not. That question pulled me into design, then into code, then into building the company that sells all three.</p>
+      <p data-reveal>Today I direct and cut brand films, design and deploy sites and custom CRMs, and handle everything from the domain to the database. Small teams get one person who can do the whole arc.</p>
+    </div>
+  </div>
+
+  <dl class="stats">
+    <div data-reveal><dt>Age</dt><dd data-count="20">20</dd></div>
+    <div data-reveal><dt>Companies</dt><dd data-count="1">1</dd></div>
+    <div data-reveal><dt>Shipped sites</dt><dd data-count="8">8</dd></div>
+    <div data-reveal><dt>Years shooting</dt><dd data-count="5">5</dd></div>
+  </dl>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <span class="contact__eyebrow" data-reveal>06 — Contact</span>
+  <a class="contact__mail" href="mailto:caleb@tetheredcrew.com" data-magnet>caleb@tetheredcrew.com</a>
+  <div class="contact__row">
+    <a href="#" data-reveal>Instagram</a>
+    <a href="#" data-reveal>YouTube</a>
+    <a href="#" data-reveal>LinkedIn</a>
+    <a href="https://github.com/roach-c" target="_blank" rel="noopener" data-reveal>GitHub</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 Caleb Roach</span>
+  <span class="foot__time" id="clock">—</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- displacement filter used by the work cards -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <filter id="warp">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise">
+      <animate attributeName="baseFrequency" dur="14s" values="0.012 0.02;0.02 0.01;0.012 0.02" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<script src="assets/js/hero.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
