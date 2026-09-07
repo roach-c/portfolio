@@ -3,243 +3,304 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Caleb Roach — Videography, Web Design, Founder</title>
-<meta name="description" content="Caleb Roach is a videographer, web designer and founder based in Oklahoma. Building brands, films and software at twenty.">
-<meta name="theme-color" content="#0B0B0C">
 
-<meta property="og:title" content="Caleb Roach — Videography, Web Design, Founder">
-<meta property="og:description" content="Videographer, web designer and founder based in Oklahoma.">
+<title>Caleb Roach | Communications &amp; Design Portfolio</title>
+<meta name="description" content="The professional portfolio of Caleb Roach, a Communications and Design student at Southern Nazarene University working in video production, web design, and business.">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="https://roach-c.github.io/portfolio/">
+
+<meta property="og:title" content="Caleb Roach | Communications &amp; Design Portfolio">
+<meta property="og:description" content="Storytelling through film, design, and code. The portfolio of Caleb Roach.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://roach-c.github.io/portfolio/">
+<meta property="og:image" content="https://roach-c.github.io/portfolio/assets/img/hero.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<!-- ============ INTRO CURTAIN ============ -->
-<div class="curtain" id="curtain" aria-hidden="true">
-  <div class="curtain__inner">
-    <span class="curtain__word">Videography</span>
-    <span class="curtain__word">Web Design</span>
-    <span class="curtain__word">Founder</span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===================== HEADER / SITE TITLE + NAV ===================== -->
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+
+    <a class="brand" href="#top">
+      <span class="brand__name">Caleb Roach</span>
+      <span class="brand__role">Communications &amp; Design</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="nav__toggle-text">Menu</span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#what-i-do">What I Do</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a class="btn btn--sm" href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+
   </div>
-  <div class="curtain__count"><span id="count">0</span></div>
-</div>
-
-<!-- ============ CURSOR ============ -->
-<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
-
-<!-- ============ NAV ============ -->
-<header class="nav">
-  <a class="nav__mark" href="#top">CR</a>
-  <nav class="nav__links">
-    <a href="#practice">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
-<main id="top">
+<main id="main">
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="hero">
-  <canvas class="hero__canvas" id="hero-canvas"></canvas>
-  <h1 class="hero__fallback" id="hero-fallback"><span>Caleb</span><span>Roach</span></h1>
+<!-- ===================== HERO / BANNER ===================== -->
+<section class="hero" aria-labelledby="hero-name">
+  <img class="hero__img" src="assets/img/hero.jpg" alt="A darkened studio desk lit by a single lamp, with a laptop running video editing software." fetchpriority="high" width="2000" height="1125">
+  <div class="hero__scrim" aria-hidden="true"></div>
 
-  <div class="hero__meta">
-    <div class="hero__meta-col">
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="hero__meta-col hero__meta-col--center">
-      <span>Open for work</span>
-      <span>Fall 2026</span>
-    </div>
-    <div class="hero__meta-col hero__meta-col--end">
-      <span>Videography · Web Design · Founder</span>
-      <span>Oklahoma, USA</span>
-    </div>
-  </div>
-
-  <div class="hero__scroll"><span>Scroll</span></div>
-</section>
-
-<!-- ============ TICKER ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track" id="ticker-track">
-    <span>Films that move</span><i>◆</i><span>Sites that convert</span><i>◆</i><span>A company at twenty</span><i>◆</i>
-  </div>
-</div>
-
-<!-- ============ STATEMENT ============ -->
-<section class="statement" id="statement">
-  <p class="statement__eyebrow" data-reveal>01 — Premise</p>
-  <h2 class="statement__text" data-split>
-    Most people pick a lane. I shoot the film, build the site,
-    and <mark>run the company that ships both.</mark>
-  </h2>
-  <div class="statement__note" data-reveal>
-    <p>Twenty years old. Full time student. Co-founder of a software studio with real clients on real infrastructure. The work below is not coursework.</p>
-  </div>
-</section>
-
-<!-- ============ PRACTICE ============ -->
-<section class="practice" id="practice">
-  <div class="section-head">
-    <span class="section-head__num">02 — Practice</span>
-    <span class="section-head__label">Three disciplines, one standard</span>
-  </div>
-
-  <ul class="practice__list">
-    <li class="practice__row" data-img="assets/img/practice-film.svg">
-      <a href="#reel">
-        <span class="practice__idx">01</span>
-        <span class="practice__title">Videography</span>
-        <span class="practice__desc">Brand films, event coverage, aerial and colour. Shot, cut and graded in house.</span>
-        <span class="practice__arrow">↗</span>
-      </a>
-    </li>
-    <li class="practice__row" data-img="assets/img/practice-web.svg">
-      <a href="#work">
-        <span class="practice__idx">02</span>
-        <span class="practice__title">Web Design</span>
-        <span class="practice__desc">Marketing sites, custom CRMs and internal tools. Design through deployment.</span>
-        <span class="practice__arrow">↗</span>
-      </a>
-    </li>
-    <li class="practice__row" data-img="assets/img/practice-founder.svg">
-      <a href="#about">
-        <span class="practice__idx">03</span>
-        <span class="practice__title">Founder</span>
-        <span class="practice__desc">Co-founder of a studio selling websites and software to small operators.</span>
-        <span class="practice__arrow">↗</span>
-      </a>
-    </li>
-  </ul>
-
-  <figure class="practice__preview" id="practice-preview" aria-hidden="true">
-    <img alt="" id="practice-preview-img" src="assets/img/practice-film.svg">
-  </figure>
-</section>
-
-<!-- ============ REEL ============ -->
-<section class="reel" id="reel">
-  <div class="section-head">
-    <span class="section-head__num">03 — Reel</span>
-    <span class="section-head__label">2026 showreel</span>
-  </div>
-
-  <div class="reel__frame" id="reel-frame">
-    <video id="reel-video" playsinline muted loop preload="none" poster="assets/img/reel-poster.svg"></video>
-    <button class="reel__play" id="reel-play" type="button">
-      <span class="reel__play-dot"></span>
-      <span class="reel__play-text">Play reel</span>
-    </button>
-    <div class="reel__hint">Drop your file at <code>assets/video/reel.mp4</code></div>
-  </div>
-
-  <div class="reel__specs">
-    <div><span>Camera</span><b>Sony FX3</b></div>
-    <div><span>Grade</span><b>DaVinci Resolve</b></div>
-    <div><span>Runtime</span><b>01:42</b></div>
-    <div><span>Year</span><b>2026</b></div>
-  </div>
-</section>
-
-<!-- ============ WORK ============ -->
-<section class="work" id="work">
-  <div class="section-head">
-    <span class="section-head__num">04 — Selected</span>
-    <span class="section-head__label">Six of the recent ones</span>
-  </div>
-
-  <div class="work__grid">
-    <article class="card" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-1.svg" alt="Tethered Crew"></a>
-      <div class="card__meta"><h3>Tethered Crew</h3><span>Brand · Site · Product</span><em>2026</em></div>
-    </article>
-    <article class="card card--tall" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-2.svg" alt="Roofing brand film"></a>
-      <div class="card__meta"><h3>Roofing Brand Film</h3><span>Direction · Colour</span><em>2026</em></div>
-    </article>
-    <article class="card" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-3.svg" alt="Field CRM"></a>
-      <div class="card__meta"><h3>Field CRM</h3><span>Product Design · Build</span><em>2026</em></div>
-    </article>
-    <article class="card" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-4.svg" alt="Lawn co. rebuild"></a>
-      <div class="card__meta"><h3>Lawn Co. Rebuild</h3><span>Web · 3D Map</span><em>2026</em></div>
-    </article>
-    <article class="card card--tall" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-5.svg" alt="Event coverage"></a>
-      <div class="card__meta"><h3>Event Coverage</h3><span>Multicam · Edit</span><em>2025</em></div>
-    </article>
-    <article class="card" data-reveal>
-      <a href="#" class="card__media"><img src="assets/img/work-6.svg" alt="Supplier portal"></a>
-      <div class="card__meta"><h3>Supplier Portal</h3><span>Web App</span><em>2025</em></div>
-    </article>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="section-head">
-    <span class="section-head__num">05 — About</span>
-    <span class="section-head__label">The short version</span>
-  </div>
-
-  <div class="about__body">
-    <p class="about__lede" data-split>
-      I am <mark>twenty</mark>, I am a full time student, and I run a software studio
-      that ships to <mark>paying clients.</mark>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Portfolio &middot; Southern Nazarene University</p>
+    <h1 class="hero__name" id="hero-name">Caleb Roach</h1>
+    <p class="hero__tagline">Storytelling through film, design, and code.</p>
+    <p class="hero__intro">
+      A Communications and Design student building brand films, websites, and the
+      software small businesses actually run on.
     </p>
-    <div class="about__cols">
-      <p data-reveal>I started with a camera and a curiosity about why some brands feel expensive and others do not. That question pulled me into design, then into code, then into building the company that sells all three.</p>
-      <p data-reveal>Today I direct and cut brand films, design and deploy sites and custom CRMs, and handle everything from the domain to the database. Small teams get one person who can do the whole arc.</p>
+    <div class="hero__actions">
+      <a class="btn" href="#work">View My Work</a>
+      <a class="btn btn--ghost" href="#contact">Get in Touch</a>
     </div>
   </div>
 
-  <dl class="stats">
-    <div data-reveal><dt>Age</dt><dd data-count="20">20</dd></div>
-    <div data-reveal><dt>Companies</dt><dd data-count="1">1</dd></div>
-    <div data-reveal><dt>Shipped sites</dt><dd data-count="8">8</dd></div>
-    <div data-reveal><dt>Years shooting</dt><dd data-count="5">5</dd></div>
-  </dl>
+  <div class="hero__location" aria-hidden="true">Oklahoma City, Oklahoma</div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ===================== WELCOME / ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="wrap">
+
+    <p class="eyebrow" data-reveal>01 &middot; Welcome</p>
+
+    <div class="about__grid">
+
+      <figure class="about__photo" data-reveal>
+        <!-- Swap the src below for a real headshot: assets/img/headshot.jpg -->
+        <img src="assets/img/headshot-placeholder.svg"
+             alt="Portrait of Caleb Roach."
+             width="800" height="1000">
+        <figcaption>Caleb Roach</figcaption>
+      </figure>
+
+      <div class="about__text">
+        <h2 class="h2" data-reveal>Hello, and welcome to my portfolio.</h2>
+
+        <p class="lede" data-reveal>
+          My name is Caleb Roach, and I&rsquo;m a Communications and Design student at
+          Southern Nazarene University in Oklahoma City.
+        </p>
+
+        <p data-reveal>
+          I&rsquo;ve always liked the part of a project where the story and the technology
+          meet, and I couldn&rsquo;t really pick one, so I ended up doing both. I shoot and
+          edit video, I design and build websites, and I co-founded a small studio
+          with a friend that sells both of those to local businesses. What I like
+          most is getting to follow something the whole way through, from the first
+          conversation with a client to the day it actually goes live.
+        </p>
+
+        <p data-reveal>
+          On this site you&rsquo;ll find the projects I&rsquo;ve finished, the skills behind
+          them, and where I&rsquo;m hoping to go after graduation. It&rsquo;s still growing, and
+          I&rsquo;ll keep adding to it as I get more work done, but I think this is a
+          pretty good picture of where I&rsquo;m at right now. Thanks for taking the time
+          to look around.
+        </p>
+
+        <ul class="facts" data-reveal>
+          <li><span>Studying</span><b>Communications &amp; Design</b></li>
+          <li><span>University</span><b>Southern Nazarene</b></li>
+          <li><span>Based in</span><b>Oklahoma City, OK</b></li>
+          <li><span>Focus</span><b>Video, Web, Business</b></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT I DO ===================== -->
+<section class="services" id="what-i-do">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">02 &middot; What I Do</p>
+      <h2 class="h2">Three disciplines, one standard.</h2>
+    </div>
+
+    <ul class="services__grid">
+
+      <li class="service" data-reveal>
+        <span class="service__num">01</span>
+        <h3>Video Production</h3>
+        <p>
+          Brand films, event coverage, and post production. I shoot, edit, and
+          color grade my own work, which keeps the story consistent from the
+          first frame to the final export.
+        </p>
+        <ul class="tags">
+          <li>Directing</li><li>Editing</li><li>Color</li><li>Motion</li>
+        </ul>
+      </li>
+
+      <li class="service" data-reveal>
+        <span class="service__num">02</span>
+        <h3>Web Design &amp; Development</h3>
+        <p>
+          Marketing sites and custom business software, designed and deployed.
+          I handle the layout, the writing, the code, and the server, so a
+          client only has to talk to one person.
+        </p>
+        <ul class="tags">
+          <li>UI Design</li><li>HTML &amp; CSS</li><li>JavaScript</li><li>Deployment</li>
+        </ul>
+      </li>
+
+      <li class="service" data-reveal>
+        <span class="service__num">03</span>
+        <h3>Business &amp; Communication</h3>
+        <p>
+          Co-founder of a two person studio with paying clients. Scoping,
+          pricing, proposals, and the ongoing client relationship are as much
+          of the job as the design itself.
+        </p>
+        <ul class="tags">
+          <li>Client Relations</li><li>Proposals</li><li>Project Management</li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== SELECTED WORK ===================== -->
+<section class="work" id="work">
+  <div class="wrap">
+
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">03 &middot; Selected Work</p>
+      <h2 class="h2">A few things I&rsquo;ve built.</h2>
+      <p class="section-head__note">
+        I&rsquo;m still writing up the full case studies, but here&rsquo;s a look at three
+        of the projects I&rsquo;ve finished recently.
+      </p>
+    </div>
+
+    <ul class="work__list">
+
+      <li class="project" data-reveal>
+        <a class="project__media" href="https://tetheredcrew.com" target="_blank" rel="noopener">
+          <img src="assets/img/work-tetheredcrew.jpg" alt="Home page of the Tethered Crew website." loading="lazy" width="1400" height="875">
+        </a>
+        <div class="project__body">
+          <h3>Tethered Crew</h3>
+          <p class="project__role">Brand, Website, and Product &middot; 2026</p>
+          <p>
+            The studio I co-founded with a friend. I designed the brand, wrote the
+            copy, built the site, and set up the hosting it still runs on today.
+          </p>
+          <a class="link" href="https://tetheredcrew.com" target="_blank" rel="noopener">
+            Visit tetheredcrew.com <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </li>
+
+      <li class="project" data-reveal>
+        <a class="project__media" href="https://retailmark.com" target="_blank" rel="noopener">
+          <img src="assets/img/work-retailmark.jpg" alt="Home page of the RetailMark website." loading="lazy" width="1400" height="875">
+        </a>
+        <div class="project__body">
+          <h3>RetailMark</h3>
+          <p class="project__role">Website and Client Software &middot; 2026</p>
+          <p>
+            A full site rebuild for a retail brokerage, plus the internal tool their
+            team uses to track suppliers. This was my first real project for a paying
+            client outside of my own company, and it taught me a lot.
+          </p>
+          <a class="link" href="https://retailmark.com" target="_blank" rel="noopener">
+            Visit retailmark.com <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </li>
+
+      <li class="project" data-reveal>
+        <div class="project__media project__media--static">
+          <img src="assets/img/work-mcray.jpg" alt="Home page of the McRay Roofing website redesign." loading="lazy" width="1400" height="875">
+        </div>
+        <div class="project__body">
+          <h3>McRay Roofing &amp; Exteriors</h3>
+          <p class="project__role">Website Redesign &middot; 2026</p>
+          <p>
+            A ground up redesign of the website for the company I work for, covering
+            the layout, the photography, and the lead form that feeds their sales
+            team. It&rsquo;s in review right now, before launch.
+          </p>
+          <p class="project__note">Preview available on request.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
 <section class="contact" id="contact">
-  <span class="contact__eyebrow" data-reveal>06 — Contact</span>
-  <a class="contact__mail" href="mailto:caleb@tetheredcrew.com" data-magnet>caleb@tetheredcrew.com</a>
-  <div class="contact__row">
-    <a href="#" data-reveal>Instagram</a>
-    <a href="#" data-reveal>YouTube</a>
-    <a href="#" data-reveal>LinkedIn</a>
-    <a href="https://github.com/roach-c" target="_blank" rel="noopener" data-reveal>GitHub</a>
+  <div class="wrap">
+
+    <p class="eyebrow" data-reveal>04 &middot; Contact</p>
+    <h2 class="h2 contact__head" data-reveal>Let&rsquo;s talk.</h2>
+    <p class="contact__note" data-reveal>
+      I&rsquo;m always glad to hear from potential employers, clients, and anyone who&rsquo;s
+      working on something interesting, so feel free to reach out. Email is easily
+      the fastest way to get me.
+    </p>
+
+    <a class="contact__mail" href="mailto:caleb@tetheredcrew.com" data-reveal>caleb@tetheredcrew.com</a>
+
+    <p data-reveal><a class="btn btn--lg" href="mailto:caleb@tetheredcrew.com">Email Me</a></p>
+
+    <div class="social" data-reveal>
+      <p class="social__label">Find me online</p>
+      <ul class="social__list">
+        <li>
+          <a href="https://github.com/roach-c" target="_blank" rel="noopener">
+            GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <!-- LINKEDIN: paste your profile URL in the href, then delete this comment
+             and the two comment markers around the list item below.
+        <li>
+          <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">
+            LinkedIn <span aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        -->
+      </ul>
+    </div>
+
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <span>© 2026 Caleb Roach</span>
-  <span class="foot__time" id="clock">—</span>
-  <a href="#top">Back to top ↑</a>
+  <div class="wrap foot__inner">
+    <span>&copy; <span id="year">2026</span> Caleb Roach</span>
+    <span class="foot__mid">Communications &amp; Design &middot; Southern Nazarene University</span>
+    <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
+  </div>
 </footer>
 
-<!-- displacement filter used by the work cards -->
-<svg class="svg-defs" aria-hidden="true" focusable="false">
-  <filter id="warp">
-    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise">
-      <animate attributeName="baseFrequency" dur="14s" values="0.012 0.02;0.02 0.01;0.012 0.02" repeatCount="indefinite"/>
-    </feTurbulence>
-    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
-</svg>
-
-<script src="assets/js/hero.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

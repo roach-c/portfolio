@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Headshot placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B1B1F"/>
+      <stop offset="1" stop-color="#101013"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g fill="none" stroke="#3A3A40" stroke-width="3">
+    <circle cx="400" cy="420" r="112"/>
+    <path d="M232 700c0-93 75-168 168-168s168 75 168 168"/>
+  </g>
+  <text x="400" y="812" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="26" letter-spacing="3" fill="#6E6C68">HEADSHOT</text>
+  <text x="400" y="852" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="20" fill="#4E4C49">replace assets/img/headshot.jpg</text>
+</svg>

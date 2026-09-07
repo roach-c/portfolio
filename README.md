@@ -1,57 +1,53 @@
 # Caleb Roach — portfolio
 
-A single page, no build step, no dependencies. Open `index.html` or serve the folder.
+Home page for my professional portfolio. One page, no build step, no dependencies.
+Open `index.html` directly, or serve the folder:
 
 ```
 python3 -m http.server 8899
 ```
 
+Live at <https://roach-c.github.io/portfolio/> (GitHub Pages, `main` branch, repo root).
+
 ## What is in here
 
 ```
-index.html
-assets/css/style.css     all styling, palette at the top
-assets/js/hero.js        the WebGL distortion hero
-assets/js/main.js        curtain, cursor, ticker, reveals, reel, counters
-assets/img/*.svg         placeholder art, replace every one
-assets/video/            drop reel.mp4 here
+index.html                 the whole page
+assets/css/style.css       all styling, palette at the top
+assets/js/main.js          mobile menu, scroll reveals, footer year
+assets/img/hero.jpg        hero banner (Pexels #30231780, Pexels License)
+assets/img/work-*.jpg      real screenshots of shipped projects
 ```
 
-## The hero effect
+## Page structure
 
-The name is drawn to an offscreen 2D canvas, uploaded as a WebGL texture, then
-pushed through a fragment shader that applies a pointer driven ripple, a slow
-ambient warp, a per channel colour offset and a procedural rotating ring. It
-falls back to plain CSS type when WebGL is missing or when the visitor has
-reduced motion turned on.
+Header with the site title and nav, hero banner, welcome and about, what I do,
+selected work, contact, footer. That order matches the assignment brief.
 
-Tuning knobs are all in `assets/js/hero.js`:
+## Still to swap
 
-| What | Where |
-|---|---|
-| Your name | `var NAME = ['CALEB', 'ROACH']` at the top |
-| Ripple strength | `ripple = dir * wave * 0.013 * uPower` |
-| Ambient warp | `drift = (vec2(n1, n2) - 0.5) * 0.0085` |
-| Colour fringing | the `amt` line |
-| Ring size and speed | `R`, `W`, and `uTime * 0.10` in the ring block |
+1. **Headshot.** `assets/img/headshot-placeholder.svg` is a placeholder. Save a real
+   photo as `assets/img/headshot.jpg` and point the `<img src>` in the About section
+   at it. It is displayed at a 4:5 crop, so shoot or crop it portrait.
+2. **LinkedIn.** The contact section has the markup commented out. Paste the profile
+   URL into the `href` and remove the two comment markers around that `<li>`.
 
-## Things to swap before this goes live
+## Notes for future me
 
-1. `assets/img/*.svg` — real stills and screenshots, same aspect ratios.
-2. `assets/video/reel.mp4` — the reel. The play button wires itself up.
-3. `hello@example.com` in `index.html` — your real address, twice if you count the link.
-4. The four social links at the bottom of the contact section.
-5. The six project cards: titles, roles, years, and the `href` on each.
-6. The stat numbers in the About section (`data-count` and the text both).
-7. `<title>` and the meta description.
+- `[data-reveal]` elements are only hidden under `html.js`, and a tiny inline script
+  in `<head>` adds that class. With JavaScript off the page renders complete rather
+  than blank. Do not move that hiding rule out from under `.js`.
+- The hero scrim is two stacked gradients tuned so white type clears WCAG AA while
+  the photograph is still readable as a photograph. Darkening it further kills the image.
+- Project rows alternate sides. The even rows flip the grid template as well as the
+  order, so the screenshot keeps the wider column on both sides.
 
 ## Palette
 
 One line changes the whole site. In `assets/css/style.css`:
 
 ```css
---accent: #0FB5AA;
+--accent: #23C4B8;
 ```
 
-`--ink` is the background, `--bone` is the type. The hero shader reads all three
-straight out of the stylesheet, so the canvas follows whatever you set.
+`--ink` is the background and `--bone` is the type.
