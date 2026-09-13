@@ -29,7 +29,7 @@
 <header class="site-header" id="top">
   <div class="site-header__inner">
 
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <span class="brand__name">Caleb Roach</span>
       <span class="brand__role">Communications &amp; Design</span>
     </a>
@@ -41,8 +41,8 @@
       </button>
 
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
         <li><a href="#what-i-do">What I Do</a></li>
         <li><a href="#work">Work</a></li>
         <li><a class="btn btn--sm" href="#contact">Contact Me</a></li>
@@ -69,6 +69,7 @@
     </p>
     <div class="hero__actions">
       <a class="btn" href="#work">View My Work</a>
+      <a class="btn btn--ghost" href="about.html">About Me</a>
       <a class="btn btn--ghost" href="#contact">Get in Touch</a>
     </div>
   </div>
@@ -103,18 +104,16 @@
         <p data-reveal>
           I&rsquo;ve always liked the part of a project where the story and the technology
           meet, and I couldn&rsquo;t really pick one, so I ended up doing both. I shoot and
-          edit video, I design and build websites, and I co-founded a small studio
-          with a friend that sells both of those to local businesses. What I like
-          most is getting to follow something the whole way through, from the first
-          conversation with a client to the day it actually goes live.
+          edit video, I design and build websites, and I co own a small studio with a
+          friend that sells both of those to local businesses. On this site you&rsquo;ll
+          find the projects I&rsquo;ve finished, the skills behind them, and where I&rsquo;m
+          hoping to go after graduation. Thanks for taking the time to look around.
         </p>
 
         <p data-reveal>
-          On this site you&rsquo;ll find the projects I&rsquo;ve finished, the skills behind
-          them, and where I&rsquo;m hoping to go after graduation. It&rsquo;s still growing, and
-          I&rsquo;ll keep adding to it as I get more work done, but I think this is a
-          pretty good picture of where I&rsquo;m at right now. Thanks for taking the time
-          to look around.
+          <a class="link" href="about.html">
+            Read more about me <span aria-hidden="true">&rarr;</span>
+          </a>
         </p>
 
         <ul class="facts" data-reveal>
@@ -296,7 +295,12 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <span>&copy; <span id="year">2026</span> Caleb Roach</span>
-    <span class="foot__mid">Communications &amp; Design &middot; Southern Nazarene University</span>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
   </div>
 </footer>

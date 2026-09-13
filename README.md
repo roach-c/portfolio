@@ -1,6 +1,6 @@
 # Caleb Roach — portfolio
 
-Home page for my professional portfolio. One page, no build step, no dependencies.
+My professional portfolio. Plain static HTML, no build step, no dependencies.
 Open `index.html` directly, or serve the folder:
 
 ```
@@ -12,23 +12,35 @@ Live at <https://roach-c.github.io/portfolio/> (GitHub Pages, `main` branch, rep
 ## What is in here
 
 ```
-index.html                 the whole page
-assets/css/style.css       all styling, palette at the top
-assets/js/main.js          mobile menu, scroll reveals, footer year
+index.html                 home page
+about.html                 About Me page
+assets/css/style.css       all styling, palette at the top, About page block near the end
+assets/js/main.js          mobile menu, scroll reveals, footer year (shared by both pages)
 assets/img/hero.jpg        hero banner (Pexels #30231780, Pexels License)
+assets/img/about-road.jpg  About page story banner (Pexels #1094545)
+assets/img/about-piano.jpg About page interests photo (Pexels #18464599)
 assets/img/work-*.jpg      real screenshots of shipped projects
 ```
 
 ## Page structure
 
-Header with the site title and nav, hero banner, welcome and about, what I do,
-selected work, contact, footer. That order matches the assignment brief.
+**index.html** — header with site title and nav, hero banner, short welcome that
+links out to the About page, what I do, selected work, contact, footer.
+
+**about.html** — page header, then seven numbered sections in the order the Week 3
+brief lists them: introduction, how I got here, what I value, what motivates me,
+outside the work, walk of faith, a brief look ahead.
+
+Both pages share the header nav, the footer nav, `style.css` and `main.js`, so a
+change to the chrome has to be made in two files. That is the tradeoff for having
+no build step.
 
 ## Still to swap
 
 1. **Headshot.** `assets/img/headshot-placeholder.svg` is a placeholder. Save a real
-   photo as `assets/img/headshot.jpg` and point the `<img src>` in the About section
-   at it. It is displayed at a 4:5 crop, so shoot or crop it portrait.
+   photo as `assets/img/headshot.jpg` and point the `<img src>` at it in BOTH
+   `index.html` (welcome) and `about.html` (introduction). It is displayed at a
+   4:5 crop, so shoot or crop it portrait.
 2. **LinkedIn.** The contact section has the markup commented out. Paste the profile
    URL into the `href` and remove the two comment markers around that `<li>`.
 
