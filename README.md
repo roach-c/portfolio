@@ -14,7 +14,9 @@ Live at <https://roach-c.github.io/portfolio/> (GitHub Pages, `main` branch, rep
 ```
 index.html                 home page
 about.html                 About Me page
-assets/css/style.css       all styling, palette at the top, About page block near the end
+resume.html                Resume, education and career, skills and certifications
+assets/css/style.css       all styling, palette at the top, About and Resume blocks near the end
+assets/resume/             the downloadable resume and the scripts that build it
 assets/js/main.js          mobile menu, scroll reveals, footer year (shared by both pages)
 assets/img/hero.jpg        hero banner (Pexels #30231780, Pexels License)
 assets/img/about-road.jpg  About page story banner (Pexels #1094545)
@@ -31,12 +33,39 @@ links out to the About page, what I do, selected work, contact, footer.
 brief lists them: introduction, how I got here, what I value, what motivates me,
 outside the work, walk of faith, a brief look ahead.
 
-Both pages share the header nav, the footer nav, `style.css` and `main.js`, so a
-change to the chrome has to be made in two files. That is the tradeoff for having
-no build step.
+**resume.html** — page header, then the three parts the assignment asks for:
+01 the full resume with download buttons, 02 education and career information,
+03 skills and certifications. Closes on a download and contact CTA.
+
+All three pages share the header nav, the footer nav, `style.css` and `main.js`, so
+a change to the chrome has to be made in three files. That is the tradeoff for
+having no build step.
+
+## The downloadable resume
+
+`assets/resume/resume-print.html` is the source of truth. It is a standalone light
+theme document sized for US Letter and it is the only file to edit.
+
+```
+python3 assets/resume/build.py        # -> Caleb-Roach-Resume.pdf   (the main download)
+python3 assets/resume/build_docx.py   # -> Caleb-Roach-Resume.docx  (editable copy)
+```
+
+The PDF is rendered by Playwright and the .docx is built by python-docx, so the two
+are separate scripts and the content is duplicated in `build_docx.py`. Change the
+wording in both, or the Word copy drifts. Never hand edit the PDF; it gets
+overwritten.
+
+Both files are committed to the repo on purpose, because GitHub Pages serves the
+repo as is and there is no build step on deploy.
 
 ## Still to swap
 
+0. **Coursework and certification dates.** `resume.html` has two HTML comments
+   marked `TODO Caleb`: the relevant coursework list is a placeholder that needs
+   the real course titles off the transcript, and the two Google certifications
+   need the month and year they were earned. Everything else on that page is
+   verified.
 1. **Headshot.** `assets/img/headshot-placeholder.svg` is a placeholder. Save a real
    photo as `assets/img/headshot.jpg` and point the `<img src>` at it in BOTH
    `index.html` (welcome) and `about.html` (introduction). It is displayed at a
@@ -51,6 +80,9 @@ no build step.
   than blank. Do not move that hiding rule out from under `.js`.
 - The hero scrim is two stacked gradients tuned so white type clears WCAG AA while
   the photograph is still readable as a photograph. Darkening it further kills the image.
+- `resume.html` has six nav items, which no longer fit beside the brand, so the
+  menu collapses to the hamburger at 880px instead of the 760px the rest of the
+  phone layout uses. Those nav rules live in their own media query.
 - Project rows alternate sides. The even rows flip the grid template as well as the
   order, so the screenshot keeps the wider column on both sides.
 

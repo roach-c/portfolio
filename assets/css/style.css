@@ -111,7 +111,7 @@ section[id]{ scroll-margin-top:calc(var(--header-h) + 12px); }
 /* ---------------- buttons ---------------- */
 
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
   padding:15px 30px;
   background:var(--accent); color:#08211F;
   font-weight:600; font-size:16px; letter-spacing:.01em;
@@ -568,6 +568,246 @@ a.project__media:hover img{ transform:scale(1.03); }
   display:flex; flex-wrap:wrap; justify-content:center; gap:14px;
 }
 
+/* =========================================================
+   RESUME PAGE  (resume.html only)
+   Shares .page-head, .crumbs, .prose, .facts, .tags, .ahead
+   with the About page. Everything below is scoped to this page.
+   ========================================================= */
+
+/* ---- 01 resume ---- */
+
+.rez{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+
+.dl{
+  display:flex; flex-wrap:wrap; gap:14px;
+  margin-bottom:clamp(32px, 4vw, 48px);
+}
+
+.rez__contact{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:clamp(40px, 5vw, 64px);
+}
+.rez__contact li{
+  background:var(--ink-2);
+  padding:18px 20px;
+  display:flex; flex-direction:column; gap:5px;
+  min-width:0;
+}
+.rez__contact span{
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--bone-dim);
+}
+.rez__contact b{
+  font-size:15px; font-weight:600;
+  overflow-wrap:anywhere;
+}
+
+.rez__block{ margin-bottom:clamp(40px, 5vw, 64px); }
+.rez__block:last-of-type{ margin-bottom:0; }
+
+.rez__head{
+  font-family:var(--font-display);
+  font-size:clamp(20px, 2.4vw, 26px);
+  font-weight:400;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  padding-bottom:12px;
+  margin-bottom:26px;
+  border-bottom:1px solid var(--line);
+}
+
+/* one job / school / activity */
+.entry{
+  padding-left:22px;
+  border-left:1px solid var(--line-soft);
+  margin-bottom:30px;
+}
+.entry:last-child{ margin-bottom:0; }
+
+.entry__head{
+  display:flex; flex-wrap:wrap; align-items:baseline;
+  justify-content:space-between; gap:6px 18px;
+}
+.entry__title{
+  font-size:18px; font-weight:600; letter-spacing:-.01em;
+}
+.entry__dates{
+  font-size:13px; color:var(--bone-dim);
+  font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+.entry__org{
+  font-size:14.5px; color:var(--accent);
+  margin:4px 0 12px;
+}
+.entry__bullets li{
+  position:relative;
+  padding-left:18px;
+  margin-bottom:8px;
+  color:var(--bone-dim);
+  font-size:16px;
+  max-width:70ch;
+}
+.entry__bullets li:last-child{ margin-bottom:0; }
+.entry__bullets li::before{
+  content:"";
+  position:absolute; left:0; top:11px;
+  width:6px; height:1px; background:var(--bone-dim);
+}
+
+.rez__more{ margin-top:clamp(32px, 4vw, 48px); }
+
+/* ---- 02 education & career ---- */
+
+.career{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+
+.career__grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:clamp(28px, 4vw, 64px);
+  align-items:start;
+}
+
+.career__card{
+  background:var(--ink-2);
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  padding:clamp(24px, 3vw, 34px);
+  position:sticky; top:calc(var(--header-h) + 20px);
+}
+.career__card h3{
+  font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+.career__card-sub{ margin-top:30px; }
+
+.facts--stack{ grid-template-columns:1fr; }
+
+.career__list li{
+  position:relative;
+  padding-left:16px;
+  margin-bottom:8px;
+  font-size:15px;
+  color:var(--bone-dim);
+}
+.career__list li:last-child{ margin-bottom:0; }
+.career__list li::before{
+  content:"";
+  position:absolute; left:0; top:10px;
+  width:5px; height:1px; background:var(--accent);
+}
+
+.tags--wrap{ flex-wrap:wrap; }
+
+.career__head{
+  font-size:clamp(19px, 2.2vw, 23px);
+  font-weight:600;
+  letter-spacing:-.01em;
+  margin-bottom:14px;
+}
+.career__text > .prose{ margin-bottom:38px; }
+.career__text > .prose:last-child{ margin-bottom:0; }
+
+/* ---- 03 skills & certifications ---- */
+
+.skills{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+
+.skills__head{
+  font-family:var(--font-display);
+  font-size:clamp(20px, 2.4vw, 26px);
+  font-weight:400;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  padding-bottom:12px;
+  margin-bottom:28px;
+  border-bottom:1px solid var(--line);
+}
+.skills__head + *{ margin-bottom:clamp(44px, 6vw, 72px); }
+
+.skillset{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:clamp(18px, 2vw, 26px);
+}
+.skillset__card{
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  background:var(--ink-2);
+  padding:clamp(24px, 3vw, 34px);
+  transition:border-color .28s var(--ease), transform .28s var(--ease);
+}
+.skillset__card:hover{ border-color:var(--line); transform:translateY(-4px); }
+.skillset__num{
+  display:block;
+  font-family:var(--font-display);
+  font-size:13px; letter-spacing:.14em;
+  color:var(--accent);
+  margin-bottom:14px;
+}
+.skillset__card h4{
+  font-size:19px; font-weight:600; letter-spacing:-.01em;
+  margin-bottom:10px;
+}
+.skillset__card p{
+  color:var(--bone-dim); font-size:15.5px;
+  margin-bottom:20px; max-width:44ch;
+}
+
+.softskills{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  overflow:hidden;
+}
+.softskills li{
+  background:var(--ink);
+  padding:20px clamp(18px, 2vw, 26px);
+  display:flex; flex-direction:column; gap:6px;
+}
+.softskills b{ font-size:16px; font-weight:600; }
+.softskills span{ font-size:14.5px; color:var(--bone-dim); }
+
+.certs{ display:flex; flex-direction:column; gap:14px; }
+.cert{
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:12px 20px;
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  background:var(--ink-2);
+  padding:20px clamp(18px, 2vw, 26px);
+}
+.cert__main h4{ font-size:17px; font-weight:600; margin-bottom:4px; }
+.cert__main p{ font-size:14px; color:var(--bone-dim); }
+.cert__state{
+  font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  padding:7px 14px;
+  border-radius:100px;
+  white-space:nowrap;
+}
+.cert__state--earned{
+  color:var(--accent);
+  border:1px solid rgba(35,196,184,.4);
+  background:rgba(35,196,184,.08);
+}
+.cert__state--progress{
+  color:var(--bone-dim);
+  border:1px solid var(--line);
+}
+.certs__note{
+  margin-top:22px;
+  font-size:14px; color:var(--bone-dim);
+  max-width:56ch;
+}
+
 /* ---------------- footer ---------------- */
 
 .foot{
@@ -599,22 +839,9 @@ a.project__media:hover img{ transform:scale(1.03); }
    Responsive
    ========================================================= */
 
-@media (max-width: 1000px){
-  .about__grid{ grid-template-columns:1fr; }
-  .values__grid{ grid-template-columns:1fr; }
-  .interests__grid{ grid-template-columns:1fr; }
-  .story__banner img{ aspect-ratio:16/9; }
-  .about__photo{ max-width:340px; }
-  .services__grid{ grid-template-columns:1fr; }
-  .project,
-  .project:nth-child(even){ grid-template-columns:1fr; }
-  .project:nth-child(even) .project__media{ order:0; }
-  .hero__location{ display:none; }
-}
-
-@media (max-width: 760px){
-  body{ font-size:16px; }
-
+/* Six nav items no longer fit beside the brand below this width,
+   so the menu collapses earlier than the rest of the phone layout. */
+@media (max-width: 880px){
   .nav__toggle{ display:inline-flex; }
 
   .nav__menu{
@@ -630,6 +857,32 @@ a.project__media:hover img{ transform:scale(1.03); }
   .nav__menu a{ display:block; padding:15px 0; font-size:16px; color:var(--bone); }
   .nav__menu .btn{ margin-top:14px; justify-content:center; }
   .nav__menu li:has(.btn){ border-top:0; }
+}
+
+@media (max-width: 1000px){
+  .about__grid{ grid-template-columns:1fr; }
+  .career__grid{ grid-template-columns:1fr; }
+  .career__card{ position:static; }
+  .skillset{ grid-template-columns:1fr; }
+  .softskills{ grid-template-columns:1fr; }
+  .rez__contact{ grid-template-columns:repeat(2, 1fr); }
+  .values__grid{ grid-template-columns:1fr; }
+  .interests__grid{ grid-template-columns:1fr; }
+  .story__banner img{ aspect-ratio:16/9; }
+  .about__photo{ max-width:340px; }
+  .services__grid{ grid-template-columns:1fr; }
+  .project,
+  .project:nth-child(even){ grid-template-columns:1fr; }
+  .project:nth-child(even) .project__media{ order:0; }
+  .hero__location{ display:none; }
+}
+
+@media (max-width: 760px){
+  body{ font-size:16px; }
+  .rez__contact{ grid-template-columns:1fr; }
+  .dl .btn{ width:100%; justify-content:center; }
+  .entry{ padding-left:16px; }
+  .entry__head{ flex-direction:column; align-items:flex-start; gap:2px; }
 
   .hero{ min-height:auto; padding-top:clamp(72px, 18vw, 120px); }
   .hero__tagline{ max-width:none; }
@@ -662,7 +915,20 @@ a.project__media:hover img{ transform:scale(1.03); }
    ========================================================= */
 
 @media print{
-  .site-header,.hero__actions,.social,.skip{ display:none; }
+  .site-header,.hero__actions,.social,.skip,
+  .dl,.crumbs,.ahead__actions,.rez__more{ display:none; }
   body{ background:#fff; color:#000; }
   .hero__scrim{ display:none; }
+}
+
+/* The resume page is the one page people actually print. Flatten it. */
+@media print{
+  .rez,.career,.skills,.ahead{ border:0; padding-block:14pt; }
+  .career__card{ position:static; border:1px solid #bbb; background:#fff; }
+  .skillset__card,.softskills li,.cert,.rez__contact li{
+    background:#fff; border-color:#bbb;
+  }
+  .entry,.skillset__card,.cert{ page-break-inside:avoid; }
+  .entry__org{ color:#333; }
+  .entry__bullets li,.softskills span,.career__list li{ color:#222; }
 }

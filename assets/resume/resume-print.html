@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Caleb Roach — Resume</title>
+<!--
+  Source file for the downloadable resume.
+  Rendered to Caleb-Roach-Resume.pdf by assets/resume/build.py.
+  Edit here, then re-run the build. Do not hand edit the PDF.
+-->
+<style>
+  @page { size: letter; margin: 0.55in 0.6in; }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+
+  body{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:9.6pt;
+    line-height:1.42;
+    color:#16181c;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  h1,h2,h3,p,ul,li{ margin:0; padding:0; }
+  ul{ list-style:none; }
+
+  /* ---------- name block ---------- */
+  .name{
+    font-size:23pt;
+    font-weight:700;
+    letter-spacing:.035em;
+    text-transform:uppercase;
+    line-height:1.05;
+  }
+  .contact{
+    margin-top:5pt;
+    font-size:9pt;
+    color:#3c4148;
+  }
+  .contact a{ color:#16181c; text-decoration:none; }
+  .rule{
+    height:1.4pt;
+    background:#16181c;
+    margin:8pt 0 11pt;
+  }
+
+  /* ---------- sections ---------- */
+  .sec{ margin-bottom:11pt; }
+  .sec:last-child{ margin-bottom:0; }
+
+  .sec > h2{
+    font-size:9.4pt;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    padding-bottom:2.5pt;
+    border-bottom:.75pt solid #9aa0a8;
+    margin-bottom:7pt;
+  }
+
+  .summary{ color:#2a2f36; }
+
+  /* ---------- job entries ---------- */
+  .job{ margin-bottom:8.5pt; page-break-inside:avoid; }
+  .job:last-child{ margin-bottom:0; }
+
+  .job__head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12pt;
+  }
+  .job__title{ font-size:10.2pt; font-weight:700; }
+  .job__dates{
+    font-size:8.7pt;
+    color:#4a5058;
+    white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+  .job__org{
+    font-size:9.3pt;
+    font-style:italic;
+    color:#3c4148;
+    margin-bottom:2.5pt;
+  }
+
+  .bullets li{
+    position:relative;
+    padding-left:10pt;
+    margin-bottom:1.6pt;
+    color:#2a2f36;
+  }
+  .bullets li::before{
+    content:"";
+    position:absolute;
+    left:1.5pt; top:5.2pt;
+    width:2.6pt; height:2.6pt;
+    background:#16181c;
+    border-radius:50%;
+  }
+
+  /* ---------- education ---------- */
+  .edu{ margin-bottom:6pt; page-break-inside:avoid; }
+  .edu:last-child{ margin-bottom:0; }
+  .edu__line{ display:flex; justify-content:space-between; align-items:baseline; gap:12pt; }
+  .edu__school{ font-size:10pt; font-weight:700; }
+  .edu__detail{ color:#3c4148; }
+
+  /* ---------- skills ---------- */
+  .skills dt{
+    float:left;
+    font-weight:700;
+    width:62pt;
+    clear:left;
+  }
+  .skills dd{
+    margin:0 0 3.5pt 62pt;
+    color:#2a2f36;
+  }
+  .skills dd:last-child{ margin-bottom:0; }
+
+  /* ---------- certifications ---------- */
+  .cert{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12pt;
+    margin-bottom:2.5pt;
+  }
+  .cert:last-child{ margin-bottom:0; }
+  .cert__issuer{ font-size:8.7pt; color:#4a5058; white-space:nowrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="name">Caleb Roach</h1>
+  <p class="contact">
+    Oklahoma City, OK &nbsp;&middot;&nbsp; 479-936-0543 &nbsp;&middot;&nbsp;
+    <a href="mailto:roachca25@gmail.com">roachca25@gmail.com</a> &nbsp;&middot;&nbsp;
+    <a href="https://roach-c.github.io/portfolio/">roach-c.github.io/portfolio</a>
+  </p>
+  <div class="rule"></div>
+</header>
+
+<section class="sec">
+  <h2>Summary</h2>
+  <p class="summary">
+    Communications and Design student at Southern Nazarene University with paid experience
+    across video production, web development, and marketing. Currently the Marketing and Web
+    Specialist at a roofing and exteriors company, where I own the website, the local search
+    presence, and the internal software the office and field crews run on, and co owner of a
+    two person studio that builds websites and business software for small companies.
+    Comfortable carrying a project from the first client meeting through design, build,
+    launch, and support.
+  </p>
+</section>
+
+<section class="sec">
+  <h2>Experience</h2>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Marketing &amp; Web Specialist</h3>
+      <span class="job__dates">Feb 2026 &ndash; Present</span>
+    </div>
+    <p class="job__org">McRay Roofing &amp; Exteriors &middot; Oklahoma City, OK</p>
+    <ul class="bullets">
+      <li>Rebuilt the company website end to end, covering layout, copy, photography, and a contact form that writes leads directly into the sales team&rsquo;s system instead of an inbox; currently in final review before launch.</li>
+      <li>Built and deployed the company&rsquo;s customer management system, used daily by a four seat office team to track jobs, customers, and documents, and administer the Linux server it runs on.</li>
+      <li>Built the employee time clock that field crews punch into from their phones, with PIN sign in, payroll exports, and admin reporting.</li>
+      <li>Automated a daily job recap that pulls from the company&rsquo;s job management platform and reaches leadership every morning with no manual work.</li>
+      <li>Own local search optimization, service area content, and the photo and video library used across the site.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Co Owner</h3>
+      <span class="job__dates">Aug 2026 &ndash; Present</span>
+    </div>
+    <p class="job__org">Tethered Crew &middot; Oklahoma City, OK</p>
+    <ul class="bullets">
+      <li>Co founded a two person studio building websites and custom business software for small companies, splitting ownership, pricing, and client relationships evenly with my partner.</li>
+      <li>Designed and shipped the studio&rsquo;s own brand and website, and set up the hosting every client project runs on.</li>
+      <li>Delivered a full website rebuild and a custom supplier tracking system for a retail brokerage, my first engagement with a paying client outside my own work.</li>
+      <li>Write the proposals, scope the work, and stay on as the client&rsquo;s point of contact after launch.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Student Worker, Creative Media &middot; Lead Videographer</h3>
+      <span class="job__dates">Aug 2025 &ndash; Present</span>
+    </div>
+    <p class="job__org">Southern Nazarene University &middot; Oklahoma City, OK</p>
+    <ul class="bullets">
+      <li>Shoot, edit, and deliver video for university departments and campus events, handling the project from the shoot through the final export.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Lead Videographer &amp; Editor, University Weekly News</h3>
+      <span class="job__dates">Aug 2025 &ndash; Present</span>
+    </div>
+    <p class="job__org">Southern Nazarene University &middot; Oklahoma City, OK</p>
+    <ul class="bullets">
+      <li>Lead the video side of the student produced weekly news show, from shoot planning through the final cut, on a weekly deadline.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Media Lead Intern</h3>
+      <span class="job__dates">May 2025 &ndash; Aug 2025</span>
+    </div>
+    <p class="job__org">Fayetteville Chamber of Commerce &middot; Fayetteville, AR &middot; Hybrid</p>
+    <ul class="bullets">
+      <li>Produced and scheduled video and social content that reached more than 30,000 viewers across the Chamber&rsquo;s digital platforms.</li>
+      <li>Coordinated media coverage of Chamber events and member businesses alongside the communications staff.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Operations &amp; Records Assistant</h3>
+      <span class="job__dates">May 2024 &ndash; Aug 2024</span>
+    </div>
+    <p class="job__org">Country Silk &middot; Hybrid</p>
+    <ul class="bullets">
+      <li>Maintained records and file systems and handled day to day operational and administrative work for a small team.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job__head">
+      <h3 class="job__title">Travel Ball Umpire</h3>
+      <span class="job__dates">2022 &ndash; Present</span>
+    </div>
+    <p class="job__org">Freelance &middot; Seasonal</p>
+    <ul class="bullets">
+      <li>Officiate youth travel baseball, managing game situations, coaches, and close calls under pressure.</li>
+    </ul>
+  </article>
+</section>
+
+<section class="sec">
+  <h2>Education</h2>
+
+  <div class="edu">
+    <div class="edu__line">
+      <span class="edu__school">Southern Nazarene University</span>
+      <span class="job__dates">Expected May 2028</span>
+    </div>
+    <p class="edu__detail">Bachelor&rsquo;s Degree, Communications &amp; Design &middot; Oklahoma City, OK</p>
+  </div>
+
+  <div class="edu">
+    <div class="edu__line">
+      <span class="edu__school">Bentonville West High School</span>
+      <span class="job__dates">Graduated 2025</span>
+    </div>
+    <p class="edu__detail">Graduated with High Honors &middot; AP Scholar &middot; Bentonville, AR</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Leadership &amp; Activities</h2>
+  <div class="edu">
+    <div class="edu__line">
+      <span class="edu__school">Salt &amp; Senate Leadership Program</span>
+      <span class="job__dates">Aug 2025 &ndash; Present</span>
+    </div>
+    <p class="edu__detail">Southern Nazarene University</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Video</dt>
+    <dd>Adobe Premiere Pro, After Effects, Lightroom &middot; directing, editing, color, motion graphics</dd>
+
+    <dt>Web</dt>
+    <dd>HTML, CSS, JavaScript &middot; responsive design, accessibility, search engine optimization</dd>
+
+    <dt>Software</dt>
+    <dd>Python, Flask, PostgreSQL &middot; Git and GitHub &middot; Linux server deployment and DNS</dd>
+
+    <dt>Office</dt>
+    <dd>Microsoft Word, Excel, PowerPoint &middot; Google Workspace &middot; file and records management</dd>
+
+    <dt>Professional</dt>
+    <dd>Client relations, project management, written and verbal communication, leadership, problem solving, time management</dd>
+  </dl>
+</section>
+
+<section class="sec">
+  <h2>Certifications</h2>
+  <div class="cert">
+    <span>Google Ads Certification</span>
+    <span class="cert__issuer">Google Skillshop</span>
+  </div>
+  <div class="cert">
+    <span>Google Analytics (GA4) Certification</span>
+    <span class="cert__issuer">Google Skillshop</span>
+  </div>
+</section>
+
+</body>
+</html>
