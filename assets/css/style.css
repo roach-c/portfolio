@@ -941,6 +941,8 @@ a.project__media:hover img{ transform:scale(1.03); }
 .award h3{ font-size:20px; font-weight:700; letter-spacing:-.015em; line-height:1.25; }
 .award__org{ font-size:14px; color:var(--bone); opacity:.8; margin:6px 0 12px; }
 .award p:last-child{ color:var(--bone-dim); font-size:15.5px; }
+/* an odd count would leave an empty cell, so the last card spans both */
+.award:last-child:nth-child(odd){ grid-column:1 / -1; }
 
 /* ---------------- footer ---------------- */
 
