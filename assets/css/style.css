@@ -944,6 +944,68 @@ a.project__media:hover img{ transform:scale(1.03); }
 /* an odd count would leave an empty cell, so the last card spans both */
 .award:last-child:nth-child(odd){ grid-column:1 / -1; }
 
+/* =========================================================
+   INTERESTS PAGE  (interests.html only)
+   Professional interests, affiliations, hobbies. Reuses
+   .page-head, .section-head, .values__grid, .value, .job,
+   .entry__bullets and .ahead from above.
+   ========================================================= */
+
+/* ---- 01 professional interests ---- */
+
+.pi{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+.pi__goal{ margin-top:clamp(44px, 6vw, 72px); }
+
+/* ---- 02 affiliations ---- */
+
+.aff{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+.aff__kind{
+  display:inline-block;
+  font-size:11px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--bone-dim);
+  margin-top:16px;
+}
+.aff .job__summary:last-child{ margin-bottom:0; }
+
+/* ---- 03 hobbies ---- */
+
+.hob{ padding-block:var(--gap); border-bottom:1px solid var(--line-soft); }
+
+.hob__grid{
+  display:grid;
+  grid-template-columns:minmax(260px, 420px) 1fr;
+  gap:clamp(32px, 5vw, 76px);
+  align-items:start;
+}
+
+.hob__photo{ position:sticky; top:calc(var(--header-h) + 24px); }
+.hob__photo img{
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  border:1px solid var(--line-soft);
+  border-radius:3px;
+  background:var(--ink-2);
+}
+.hob__photo figcaption{
+  margin-top:14px;
+  font-size:13.5px;
+  color:var(--bone-dim);
+}
+
+.hob__body .lede{ max-width:52ch; margin-bottom:clamp(28px, 4vw, 44px); }
+
+.hob__item{
+  padding-block:24px;
+  border-top:1px solid var(--line);
+}
+.hob__item:last-child{ border-bottom:1px solid var(--line); }
+.hob__item h3{
+  font-size:clamp(19px, 2vw, 22px); font-weight:700;
+  letter-spacing:-.015em; line-height:1.2;
+  margin-bottom:8px;
+}
+.hob__item p{ color:var(--bone-dim); font-size:16px; max-width:60ch; }
+
 /* ---------------- footer ---------------- */
 
 .foot{
@@ -975,10 +1037,10 @@ a.project__media:hover img{ transform:scale(1.03); }
    Responsive
    ========================================================= */
 
-/* Seven nav items no longer fit beside the brand below ~915px
+/* Eight nav items no longer fit beside the brand below ~1025px
    (a link starts wrapping onto two lines), so the menu collapses
    earlier than the rest of the phone layout. */
-@media (max-width: 940px){
+@media (max-width: 1060px){
   .nav__toggle{ display:inline-flex; }
 
   .nav__menu{
@@ -1017,6 +1079,8 @@ a.project__media:hover img{ transform:scale(1.03); }
   .cp__media{ position:static; }
   .cp__item:nth-child(even) .cp__media--tall{ justify-self:start; }
   .job{ grid-template-columns:1fr; }
+  .hob__grid{ grid-template-columns:1fr; }
+  .hob__photo{ position:static; max-width:420px; }
   .hero__location{ display:none; }
 }
 

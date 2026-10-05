@@ -15,12 +15,15 @@ Live at <https://roach-c.github.io/portfolio/> (GitHub Pages, `main` branch, rep
 index.html                 home page
 about.html                 About Me page
 resume.html                Resume, education and career, skills and certifications
+experience.html            Class projects, work experience, awards
+interests.html             Professional interests, affiliations, hobbies
 assets/css/style.css       all styling, palette at the top, About and Resume blocks near the end
 assets/resume/             the downloadable resume and the scripts that build it
 assets/js/main.js          mobile menu, scroll reveals, footer year (shared by both pages)
 assets/img/hero.jpg        hero banner (Pexels #30231780, Pexels License)
 assets/img/about-road.jpg  About page story banner (Pexels #1094545)
 assets/img/about-piano.jpg About page interests photo (Pexels #18464599)
+assets/img/interests-hoop.jpg  Interests page hobbies photo (Pexels #12765522)
 assets/img/work-*.jpg      real screenshots of shipped projects
 ```
 
@@ -70,6 +73,8 @@ repo as is and there is no build step on deploy.
    photo as `assets/img/headshot.jpg` and point the `<img src>` at it in BOTH
    `index.html` (welcome) and `about.html` (introduction). It is displayed at a
    4:5 crop, so shoot or crop it portrait.
+3. **Affiliations.** `interests.html` has two `TODO Caleb` comments: add any
+   missing memberships and say what you do in Salt & Senate.
 2. **LinkedIn.** The contact section has the markup commented out. Paste the profile
    URL into the `href` and remove the two comment markers around that `<li>`.
 
@@ -80,9 +85,10 @@ repo as is and there is no build step on deploy.
   than blank. Do not move that hiding rule out from under `.js`.
 - The hero scrim is two stacked gradients tuned so white type clears WCAG AA while
   the photograph is still readable as a photograph. Darkening it further kills the image.
-- `resume.html` has six nav items, which no longer fit beside the brand, so the
-  menu collapses to the hamburger at 880px instead of the 760px the rest of the
-  phone layout uses. Those nav rules live in their own media query.
+- The header has eight nav items, which stop fitting beside the brand at about
+  1025px, so the menu collapses to the hamburger at 1060px instead of the 760px the
+  rest of the phone layout uses. Those nav rules live in their own media query, and
+  a ninth item means measuring it again.
 - Project rows alternate sides. The even rows flip the grid template as well as the
   order, so the screenshot keeps the wider column on both sides.
 
