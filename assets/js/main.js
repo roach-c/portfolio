@@ -1,6 +1,7 @@
 /* =========================================================
    Caleb Roach — portfolio
-   Three small jobs: the mobile menu, the scroll reveals, and the year.
+   Four small jobs: the mobile menu, the scroll reveals, the gallery
+   viewer on the media page, and the year.
    Everything degrades to a perfectly readable page without it.
    ========================================================= */
 
@@ -63,6 +64,51 @@
 
     // Safety net: if anything above never fires, show the page anyway.
     window.setTimeout(showAll, 4000);
+  }
+
+  /* ---------- gallery viewer (media page) ----------
+     Each tile is a real link to its image, so with JavaScript off, or in a
+     browser without <dialog>, it simply opens the picture. */
+
+  var box   = document.getElementById('lightbox');
+  var tiles = document.querySelectorAll('.gal__tile');
+
+  if (box && tiles.length && typeof box.showModal === 'function') {
+    var boxImg   = document.getElementById('lightbox-img');
+    var boxTitle = document.getElementById('lightbox-title');
+    var boxCap   = document.getElementById('lightbox-caption');
+    var boxCount = document.getElementById('lightbox-count');
+    var current  = 0;
+
+    var show = function (i) {
+      current = (i + tiles.length) % tiles.length;
+      var tile  = tiles[current];
+      var thumb = tile.querySelector('img');
+      boxImg.src = tile.getAttribute('href');
+      boxImg.alt = thumb ? thumb.alt : '';
+      boxTitle.textContent = tile.getAttribute('data-title') || '';
+      boxCap.textContent   = tile.getAttribute('data-caption') || '';
+      boxCount.textContent = (current + 1) + ' of ' + tiles.length;
+    };
+
+    Array.prototype.forEach.call(tiles, function (tile, i) {
+      tile.addEventListener('click', function (e) {
+        e.preventDefault();
+        show(i);
+        box.showModal();
+      });
+    });
+
+    box.addEventListener('click', function (e) {
+      if (e.target === box || e.target.closest('[data-lightbox-close]')) box.close();
+      else if (e.target.closest('[data-lightbox-prev]')) show(current - 1);
+      else if (e.target.closest('[data-lightbox-next]')) show(current + 1);
+    });
+
+    box.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
   }
 
   /* ---------- footer year ---------- */

@@ -17,6 +17,12 @@ about.html                 About Me page
 resume.html                Resume, education and career, skills and certifications
 experience.html            Class projects, work experience, awards
 interests.html             Professional interests, affiliations, hobbies
+faith.html                 My Walk of Faith (a DRAFT until Caleb has read it, see the TODO at the top)
+media.html                 Web design reel, image gallery with a full size viewer, image credits
+contact.html               Contact details and the contact form (posts to FormSubmit)
+thanks.html                Where the form sends people after a message goes through
+assets/video/web-reel.mp4  45 second screen recording of tetheredcrew.com and retailmark.com
+assets/img/faith-road.jpg  Walk of Faith photo (Pexels #15645536)
 assets/css/style.css       all styling, palette at the top, About and Resume blocks near the end
 assets/resume/             the downloadable resume and the scripts that build it
 assets/js/main.js          mobile menu, scroll reveals, footer year (shared by both pages)
@@ -78,6 +84,12 @@ repo as is and there is no build step on deploy.
 2. **LinkedIn.** The contact section has the markup commented out. Paste the profile
    URL into the `href` and remove the two comment markers around that `<li>`.
 
+4. **Contact form.** `contact.html` posts to FormSubmit. The first message sent
+   from the live site triggers a one time activation email to
+   caleb@tetheredcrew.com, and nothing is delivered until that link is clicked.
+5. **A second video.** `media.html` has a `TODO Caleb` for a real video project
+   (a Weekly News episode or a brand film) to sit beside the web reel.
+
 ## Notes for future me
 
 - `[data-reveal]` elements are only hidden under `html.js`, and a tiny inline script
@@ -85,7 +97,8 @@ repo as is and there is no build step on deploy.
   than blank. Do not move that hiding rule out from under `.js`.
 - The hero scrim is two stacked gradients tuned so white type clears WCAG AA while
   the photograph is still readable as a photograph. Darkening it further kills the image.
-- The header has eight nav items, which stop fitting beside the brand at about
+- The header still has eight nav items (Faith, Media and Contact replaced the
+  What I Do and Work anchors, which are reachable from the home page), which stop fitting beside the brand at about
   1025px, so the menu collapses to the hamburger at 1060px instead of the 760px the
   rest of the phone layout uses. Those nav rules live in their own media query, and
   a ninth item means measuring it again.
